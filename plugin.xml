@@ -87,5 +87,19 @@
         <framework src="AdSupport.framework" weak="true" />
         <framework src="iAd.framework" weak="true" />
         <framework src="Security.framework" weak="true" />
+
+        <preference name="IOS_ASSOCIATED_DOMAIN" />
+        <config-file target="*-Debug.plist" parent="com.apple.developer.associated-domains">
+            <array>
+                <string>$IOS_ASSOCIATED_DOMAIN</string>
+            </array>
+        </config-file>
+
+        <config-file target="*-Release.plist" parent="com.apple.developer.associated-domains">
+            <array>
+                <string>$IOS_ASSOCIATED_DOMAIN</string>
+            </array>
+        </config-file>
+
     </platform>
 </plugin>
