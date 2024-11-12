@@ -68,7 +68,7 @@
 
                     <data
                     android:host="Torpedo"
-                    android:scheme="${URL_SCHEME}" />
+                    android:scheme="$URL_SCHEME" />
                 </intent-filter>
             </receiver>
         </config-file>
