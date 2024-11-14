@@ -124,7 +124,14 @@
            </array>
           </dict>
         </array>
-        </config-file>      
+        </config-file>  
+
+        <preference name="IOS_ASSOC_DOMAIN" />
+        <config-file target="*-Info.plist" parent="com.apple.developer.associated-domains">
+          <array>
+            <string>applinks:$IOS_ASSOC_DOMAIN</string>
+          </array>
+        </config-file>
     </platform>
   
 </plugin>
