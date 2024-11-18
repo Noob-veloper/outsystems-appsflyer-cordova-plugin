@@ -53,6 +53,7 @@
                 <param name="android-package" value="com.appsflyer.cordova.plugin.AppsFlyerPlugin"/>
             </feature>
         </config-file>
+      
         <config-file target="AndroidManifest.xml" parent="/manifest" mode="merge">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -62,10 +63,6 @@
             <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
                 <intent-filter>
                     <action android:name="com.android.vending.INSTALL_REFERRER" />
-                    <action android:name="android.intent.action.VIEW" />
-                    
-                    <category android:name="android.intent.category.DEFAULT" />
-                    <category android:name="android.intent.category.BROWSABLE" />
                 </intent-filter>
             </receiver>
             
