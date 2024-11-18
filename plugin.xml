@@ -65,12 +65,33 @@
                     
                     <category android:name="android.intent.category.DEFAULT" />
                     <category android:name="android.intent.category.BROWSABLE" />
-
-                    <data
-                    android:host="Torpedo"
-                    android:scheme="$URL_SCHEME" />
                 </intent-filter>
             </receiver>
+        </config-file>
+      
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <activity
+                android:name=".Torpedo"
+                android:launchMode="singleTask">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <data android:host="Torpedo" android:scheme="$URL_SCHEME" />
+                </intent-filter>
+
+                <!-- <intent-filter android:autoVerify="true">
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <data android:host="" android:pathPrefix="" android:scheme="https" />
+                </intent-filter> -->
+            </activity>
         </config-file>
 
         <source-file src="src/android/com/appsflyer/cordova/plugin/AppsFlyerPlugin.java" target-dir="src/com/appsflyer/cordova/plugin" />
